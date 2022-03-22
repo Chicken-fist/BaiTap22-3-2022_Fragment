@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <fragment
+        android:id="@+id/fragmentA"
+        android:name="com.example.testframent.Fragment_A"
+        android:layout_width="345dp"
+        android:layout_height="197dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/fragment__a" />
+
+    <fragment
+        android:id="@+id/fragmentB"
+        android:name="com.example.testframent.FragmentB"
+        android:layout_width="337dp"
+        android:layout_height="267dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="448dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/fragment_b" />
+
+    <Button
+        android:id="@+id/btnThayDoiFrag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="124dp"
+        android:text="Truyền dữ liệu sang fragment A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentA" />
+
+    <TextView
+        android:id="@+id/txtDL"
+        android:layout_width="316dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="76dp"
+        android:text="Nơi Được Dữ Liệu từ Frament B"
+        android:textColor="#FF0000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/fragmentA"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/fragmentA"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentA" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
